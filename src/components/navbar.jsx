@@ -16,7 +16,7 @@ export default function Navbar() {
           <li>
             <a
               className="border-b-transparent border-b-[1px] hover:border-b-rose-600 hover:text-rose-600 transition-none"
-              href="#Waktu"
+              href="#time"
             >
               Hora
             </a>
@@ -24,7 +24,7 @@ export default function Navbar() {
           <li>
             <a
               className="border-b-transparent border-b-[1px] hover:border-b-rose-600 hover:text-rose-600 transition-none"
-              href="#lokasi"
+              href="#location"
             >
               Ubicación
             </a>
@@ -32,7 +32,7 @@ export default function Navbar() {
           <li>
             <a
               className="border-b-transparent border-b-[1px] hover:border-b-rose-600 hover:text-rose-600 transition-none"
-              href="#tentang-sherly-daeng"
+              href="#about"
             >
               Acerca de Eunice & Alan
             </a>

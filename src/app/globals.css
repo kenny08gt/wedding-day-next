@@ -238,3 +238,55 @@ body.preloader-site {
   background-repeat: no-repeat;
   background-size: initial;
 }
+
+.tile {
+  border-radius: 10px;
+}
+
+
+.title-foto {
+  font-size: 18pt;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  color: white;
+}
+
+.foto1, .foto2, .foto3, .foto4, .foto5, .foto6, .foto7, .foto8 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/fotoCoecys.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+  width: 30vw;
+  padding: 1rem;
+}
+
+.foto2 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/cierre.jpeg");
+}
+
+.foto3 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/privado.jpeg");
+}
+
+.foto4 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/graduacion.jpeg");
+}
+
+.foto5 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/2021.jpeg");
+}
+
+.foto6 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/2022.jpeg");
+}
+
+.foto7 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/img3.jpeg");
+}
+
+.foto8 {
+  background-position: bottom;
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/img2.jpeg");
+}

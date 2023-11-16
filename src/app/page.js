@@ -3,31 +3,31 @@ import Navbar from "@/components/navbar";
 import TimerStyled from "@/components/timer";
 import Image from "next/image";
 import { useTimer } from "react-timer-hook";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
   const expiryTimestamp = new Date("02/25/2024 17:00");
   expiryTimestamp.setSeconds(expiryTimestamp.getSeconds());
-  const {
-    totalSeconds,
-    seconds,
-    minutes,
-    hours,
-    days,
-    isRunning,
-    start,
-    pause,
-    resume,
-    restart,
-  } = useTimer({
+  const { seconds, minutes, hours, days } = useTimer({
     expiryTimestamp,
     onExpire: () => console.warn("onExpire called"),
   });
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <section className="hero h-screen w-screen flex justify-center items-center text-center">
         <div>
-          <div className="info_wrapper">
+          <div
+            className="info_wrapper"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+          >
             <h1 className=" text-white text-2xl pb-15">Invitación de boda</h1>
             <h2 className="hero_title">Eunice & Alan</h2>
             <h4 className="text-white text-2xl pt-15">
@@ -36,7 +36,7 @@ export default function Home() {
               Guatemala
             </h4>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-easing="linear">
             <div style={{ fontSize: "100px" }} className="flex mt-12">
               <TimerStyled
                 seconds={seconds}
@@ -49,7 +49,10 @@ export default function Home() {
         </div>
       </section>
       <Navbar />
-      <section className="intro min-h-screen w-screen flex justify-center items-center text-center relative flex-col px-[40px] py-[80px]">
+      <section
+        id="home"
+        className="intro min-h-screen w-screen flex justify-center items-center text-center relative flex-col px-[40px] py-[80px]"
+      >
         <div className="background1"></div>
         <div data-aos="fade-up" data-aos-easing="linear" className="z-10">
           <img
@@ -86,7 +89,10 @@ export default function Home() {
         <span className="h-[40px]"></span>
         <span className="h-[40px]"></span>
       </section>
-      <section className="intro bg-fuchsia-300/50 text-slate-700 min-h-screen w-screen flex justify-center items-center text-center relative flex-col px-[40px] py-[80px]">
+      <section
+        id="time"
+        className="intro bg-fuchsia-300/50 text-slate-700 min-h-screen w-screen flex justify-center items-center text-center relative flex-col px-[40px] py-[80px]"
+      >
         <div className="background2"></div>
         <div className="">
           <div className="" data-aos="fade-up" data-aos-easing="linear">
@@ -187,7 +193,10 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="intro bg-fuchsia-100/50 text-slate-700 min-h-screen w-screen flex justify-center items-center text-center relative flex-col px-[40px] py-[80px]">
+      <section
+        id="location"
+        className="intro bg-fuchsia-100/50 text-slate-700 min-h-screen w-screen flex justify-center items-center text-center relative flex-col px-[40px] py-[80px]"
+      >
         <div className="background3 z-0"></div>
         <div className="z-10 w-screen px-14">
           <div className="" data-aos="fade-up" data-aos-easing="linear">
@@ -234,7 +243,7 @@ export default function Home() {
               allowfullscreen=""
             ></iframe>
           </div>
-          <div className="space40px"></div>
+          <div className="h-[40px]"></div>
           <div
             className="flex justify-center mt-14"
             data-aos="fade-up"
@@ -269,6 +278,144 @@ export default function Home() {
               </svg>
               &nbsp;&nbsp;Waze
             </a>
+          </div>
+        </div>
+      </section>
+      <section
+        id="about"
+        className="intro bg-fuchsia-100/5 text-slate-700 min-h-screen w-screen flex justify-center items-center text-center relative flex-col px-[40px] py-[80px]"
+      >
+        <div className=" w-screen">
+          <div className="">
+            <div className="">
+              <h1
+                className="text-4xl mb-4 pb-8 pt-12"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+              >
+                Nuestra historia en fotos
+              </h1>
+
+              <div className=" tile mt-8">
+                <div className="tile is-ancestor flex w-100 justify-evenly">
+                  <div className="tile is-parent p-3">
+                    <article
+                      className="tile is-child foto1 notification foto1 "
+                      data-aos="fade-up"
+                      data-aos-easing="linear"
+                    >
+                      <div className="content">
+                        <p className="title-foto">Octubre 2013</p>
+                        <p className="subtitle-foto"></p>
+                      </div>
+                    </article>
+                  </div>
+                  <div className="tile is-parent p-3">
+                    <article
+                      className="tile is-child notification foto2 "
+                      data-aos="fade-up"
+                      data-aos-easing="linear"
+                    >
+                      <div className="content">
+                        <p className="title-foto">Octubre 2016</p>
+                        <p className="subtitle-foto"></p>
+                      </div>
+                    </article>
+                  </div>
+                  <div className="tile is-parent p-3">
+                    <article
+                      className="tile is-child notification foto3 "
+                      data-aos="fade-up"
+                      data-aos-easing="linear"
+                    >
+                      <div className="content">
+                        <p className="title-foto">Septiembre 2017</p>
+                        <p className="subtitle-foto"></p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <div className="h-[24px]"></div>
+              <div className="tile is-ancestor flex justify-evenly">
+                <div className="tile is-parent">
+                  <article
+                    className="tile is-child notification foto4"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                  >
+                    <div className="content">
+                      <p className="title-foto">Noviembre 2017</p>
+                    </div>
+                  </article>
+                </div>
+                <div className="tile is-parent">
+                  <article
+                    className="tile is-child notification foto5"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                  >
+                    <div className="content">
+                      <p className="title-foto">2021</p>
+                      <p className="subtitle-foto"></p>
+                    </div>
+                  </article>
+                </div>
+                <div className="tile is-parent">
+                  <article
+                    className="tile is-child notification foto6"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                  >
+                    <div className="content">
+                      <p className="title-foto">2022</p>
+                      <p className="subtitle-foto"></p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div className="h-[24px]"></div>
+              <div className="tile is-ancestor flex justify-evenly">
+                <div className="tile is-parent">
+                  <article
+                    className="tile is-child notification foto7"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                  >
+                    <div className="content">
+                      <p className="title-foto">2023</p>
+                      <p className="subtitle-foto"></p>
+                    </div>
+                  </article>
+                </div>
+                <div className="tile is-parent">
+                  <article
+                    className="tile is-child notification foto8"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                  >
+                    <div className="content">
+                      <p className="title-foto">2023</p>
+                      <p className="subtitle-foto"></p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div className="h-[40px]"></div>
+              <div
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                className="text-center flex justify-center mt-8"
+              >
+                <img
+                  src="/img/divider-leaves.png"
+                  className="h-[60px]"
+                  alt="divider leaves"
+                />
+              </div>
+              <div className="h-[40px]"></div>
+              <div className="h-[40px]"></div>
+            </div>
           </div>
         </div>
       </section>
