@@ -1,5 +1,5 @@
 import React from "react";
-import Digit from "./Digit";
+import Digit from "./digit";
 
 export default function TimerStyled({ seconds, minutes, hours, days }) {
   return (
