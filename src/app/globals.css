@@ -176,7 +176,9 @@ body.preloader-site {
   opacity: 0.4;
 }
 
-.background1, .background2 {
+.background1,
+.background2,
+.background3 {
   background-image: url("/img/foto-pettine-IfjHaIoAoqE-unsplash.jpeg");
   background-size: cover;
   position: absolute;
@@ -190,9 +192,20 @@ body.preloader-site {
   background-attachment: fixed;
   z-index: -1;
 }
+
 .background2 {
   background-image: url("/img/20231109_131013.jpeg");
+}
 
+.background3 {
+
+  background: #EDD2D1 url(/img/blue_rose.png) no-repeat;
+  background-size: cover;
+  background-position: top right;
+  background-size: 235px;
+  opacity: 1;
+  filter: none;
+  z-index: 0;
 }
 
 .bodytext {
