@@ -1,14 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway|Rouge+Script");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --pink: #FFA5AB;
+  --green: #ABE188;
+  --skyblue: #00AFB9;
+  --purple: #7871AA;
+  --fusia: #A657AE;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -18,10 +27,145 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+body.preloader-site {
+  overflow: hidden;
+}
+
+
+.preloader-wrapper {
+  height: 100%;
+  width: 100%;
+  /* background: #D8A9A8; */
+  background: #ffa5ab;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+
+.preloader-wrapper .preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 120px;
+}
+
+.hero {
+  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url("/img/img1.jpeg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero_title {
+  font-family: 'Rouge Script', sans-serif;
+  font-weight: 700;
+  transform: rotate(-2deg);
+  font-size: 5rem;
+  padding-bottom: 5px;
+  color: whitesmoke;
+}
+
+.timer_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.timer_box {
+  position: relative;
+  display: flex;
+  flex: 0 1 25%;
+  font-size: 30px;
+  background-color: rgb(64, 69, 73);
+  border-radius: 5px;
+  padding: 10px 12px;
+  color: white;
+}
+
+.timer_box::after {
+  position: absolute;
+  inset: 50% 0px;
+  content: "";
+  height: 2px;
+  background-color: rgb(35, 35, 35);
+  opacity: 0.4;
+}
+
+.timer_separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+  margin: 0 0 10px 0px;
+}
+
+.timer_separator_child {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #404549;
+  border-radius: 6px;
+  margin: 5px 0px;
+}
+
+.digit_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.digit_container:first-child {
+  margin-left: 0;
+}
+
+.digit_title {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.digit_wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.single_digit {
+  position: relative;
+  display: flex;
+  flex: 0 1 25%;
+  font-size: 30px;
+  background-color: #404549;
+  border-radius: 5px;
+  padding: 10px 12px;
+  color: white;
+}
+
+.single_digit {
+  margin-right: 2px;
+}
+
+.single_digit::after{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 50%;
+  bottom: 50%;
+  content: "";
+  width: "100%";
+  height: 2px;
+  background-color: #232323;
+  opacity: 0.4;
 }
