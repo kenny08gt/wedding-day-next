@@ -2,32 +2,51 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <navbar>
-      <div className="hero-foot ">
-        <div className="hero-foot--wrapper">
-          <div className="columns">
-            <div className="column is-12 hero-menu-desktop has-text-centered">
-              <ul>
-                <li className="is-active">
-                  <a href="#home">Inicio</a>
-                </li>
-                <li>
-                  <a href="#Waktu">Hora</a>
-                </li>
-                <li>
-                  <a href="#lokasi">Ubicación</a>
-                </li>
-                <li>
-                  <a href="#tentang-sherly-daeng">Acerca de Eunice & Alan</a>
-                </li>
+    <navbar className="w-screen sticky top-0 bg-white z-20 ">
+      <div className="">
+        <ul className="flex justify-between px-20 py-8 shadow-md text-rose-800">
+          <li className="is-active">
+            <a
+              className="border-b-transparent border-b-[1px] hover:border-b-rose-600 hover:text-rose-600 transition-none"
+              href="#home"
+            >
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a
+              className="border-b-transparent border-b-[1px] hover:border-b-rose-600 hover:text-rose-600 transition-none"
+              href="#Waktu"
+            >
+              Hora
+            </a>
+          </li>
+          <li>
+            <a
+              className="border-b-transparent border-b-[1px] hover:border-b-rose-600 hover:text-rose-600 transition-none"
+              href="#lokasi"
+            >
+              Ubicación
+            </a>
+          </li>
+          <li>
+            <a
+              className="border-b-transparent border-b-[1px] hover:border-b-rose-600 hover:text-rose-600 transition-none"
+              href="#tentang-sherly-daeng"
+            >
+              Acerca de Eunice & Alan
+            </a>
+          </li>
 
-                <li>
-                  <a href="#rsvp">RSVP</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          <li>
+            <a
+              className="border-b-transparent border-b-[1px] hover:border-b-rose-600 hover:text-rose-600 transition-none"
+              href="#rsvp"
+            >
+              RSVP
+            </a>
+          </li>
+        </ul>
       </div>
     </navbar>
   );
