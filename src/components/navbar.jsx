@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <navbar className="w-screen sticky top-0 bg-white z-20 ">
+    <navbar className="navbar w-screen sticky top-0 bg-white z-20 ">
       <div className="">
         <ul className="flex justify-between px-20 py-8 shadow-md text-rose-800">
           <li className="is-active">

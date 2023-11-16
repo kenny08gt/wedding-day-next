@@ -30,6 +30,7 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      overflow-x: hidden;
 }
 
 body.preloader-site {
@@ -289,4 +290,21 @@ body.preloader-site {
 .foto8 {
   background-position: bottom;
   background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("/img/img2.jpeg");
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .timer_container {
+    margin: auto;
+  }
+  .single_digit {
+    width: 30px;
+  }
+  .foto1, .foto2, .foto3, .foto4, .foto5, .foto6, .foto7, .foto8 {
+    width: 100%;
+  }
+  
 }

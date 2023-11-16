@@ -99,7 +99,7 @@ export default function Home() {
             <h1 className="text-center text-4xl">Hora y Lugar</h1>
           </div>
           <div
-            className="flex justify-around pt-14"
+            className="flex justify-around pt-14 md:flex-row flex-col"
             data-aos="fade-up"
             data-aos-easing="linear"
           >
@@ -110,14 +110,14 @@ export default function Home() {
                 <div className="text-xl">Febrero 2024</div>
               </p>
             </div>
-            <div className="">
+            <div className="mt-14 md:mt-0">
               <p className="text-xl ">
                 Se abren puertas
                 <br />
                 <strong className="text-4xl my-4 block">17:00</strong>
               </p>
             </div>
-            <div className="">
+            <div className="mt-14 md:mt-0">
               <h1 className="text-xl">
                 Inicio de acto
                 <br />
@@ -127,13 +127,13 @@ export default function Home() {
           </div>
           <div className="h-[40px]"></div>
           <div
-            className="flex w-screen justify-around"
+            className="flex w-screen justify-around md:flex-row flex-col"
             data-aos="fade-up"
             data-aos-easing="linear"
           >
             <div className="" data-aos="fade-up" data-aos-easing="linear">
               <h2 className="text-4xl mb-8 mt-12">Itinerario</h2>
-              <table className="text-left">
+              <table className="text-left mx-auto">
                 <tbody>
                   <tr>
                     <th>17:00</th>
@@ -245,13 +245,13 @@ export default function Home() {
           </div>
           <div className="h-[40px]"></div>
           <div
-            className="flex justify-center mt-14"
+            className="flex justify-center mt-14 md:flex-row flex-col"
             data-aos="fade-up"
             data-aos-easing="linear"
           >
             <a
               href="https://maps.app.goo.gl/yyS1944XPncpLp2b7"
-              className="bg-[#00AFB9] hover:bg-[#7871AA] transition-colors text-white px-6 py-4 rounded-md mb-14 flex"
+              className="bg-[#00AFB9] hover:bg-[#7871AA] transition-colors text-white px-6 py-4 rounded-md mb-14 flex justify-center"
               target="_blank"
               data-aos="zoom-in"
             >
@@ -261,7 +261,7 @@ export default function Home() {
             <div className="w-[40px]"></div>
             <a
               href="https://www.waze.com/en/live-map/directions?latlng=14.608688522256644%2C-90.64864397048952"
-              className="bg-[#00AFB9] hover:bg-[#7871AA] transition-colors text-white px-6 py-4 rounded-md mb-14 flex"
+              className="bg-[#00AFB9] hover:bg-[#7871AA] transition-colors text-white px-6 py-4 rounded-md mb-14 flex justify-center"
               target="_blank"
               data-aos="zoom-in"
             >
@@ -297,7 +297,7 @@ export default function Home() {
               </h1>
 
               <div className=" tile mt-8">
-                <div className="tile is-ancestor flex w-100 justify-evenly">
+                <div className="tile is-ancestor flex w-100 justify-evenly flex-col md:flex-row">
                   <div className="tile is-parent p-3">
                     <article
                       className="tile is-child foto1 notification foto1 "
@@ -337,8 +337,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="h-[24px]"></div>
-              <div className="tile is-ancestor flex justify-evenly">
-                <div className="tile is-parent">
+              <div className="tile is-ancestor flex justify-evenly flex-col md:flex-row">
+                <div className="tile is-parent p-3">
                   <article
                     className="tile is-child notification foto4"
                     data-aos="fade-up"
@@ -349,7 +349,7 @@ export default function Home() {
                     </div>
                   </article>
                 </div>
-                <div className="tile is-parent">
+                <div className="tile is-parent p-3">
                   <article
                     className="tile is-child notification foto5"
                     data-aos="fade-up"
@@ -361,7 +361,7 @@ export default function Home() {
                     </div>
                   </article>
                 </div>
-                <div className="tile is-parent">
+                <div className="tile is-parent p-3">
                   <article
                     className="tile is-child notification foto6"
                     data-aos="fade-up"
@@ -375,8 +375,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="h-[24px]"></div>
-              <div className="tile is-ancestor flex justify-evenly">
-                <div className="tile is-parent">
+              <div className="tile is-ancestor flex justify-evenly flex-col md:flex-row">
+                <div className="tile is-parent p-3">
                   <article
                     className="tile is-child notification foto7"
                     data-aos="fade-up"
@@ -388,7 +388,7 @@ export default function Home() {
                     </div>
                   </article>
                 </div>
-                <div className="tile is-parent">
+                <div className="tile is-parent p-3">
                   <article
                     className="tile is-child notification foto8"
                     data-aos="fade-up"
