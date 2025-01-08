@@ -177,7 +177,7 @@ export default function Home() {
         <div className="h-[40px]"></div>
         <div className="my-12" data-aos="fade-up" data-aos-easing="linear">
           <a
-            href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NGgzdW00NG84dXFwMzcwNXYxbGliNGxzaWggZGFlbmdkb2FuZ0Bt&amp;tmsrc=daengdoang%40gmail.com"
+            href="https://www.google.com/calendar/render?action=TEMPLATE&text=Alan+%26+Eunice+Wedding&details=Alan+%26+Eunice+Weeding+day++-+Domingo+Febrero+25%2C+2024.&location=Eventos+Alux%0AKm+27.5+Carretera+Interamericana+hacia+San+Lucas+Sacatep%C3%A9quez%2C%0ASan+Lucas+Sacatep%C3%A9quez%2C+Guatemala&dates=20240225T223000Z%2F20240226T020000Z"
             target="_blank"
             className="bg-[#00AFB9] hover:bg-[#7871AA] transition-colors text-white px-4 py-4 rounded-md mb-14 flex"
             data-tooltip="Add to Calendar"
